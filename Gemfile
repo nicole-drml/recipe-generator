@@ -1,23 +1,25 @@
-source "https://rubygems.org"
+source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "3.1.2"
+ruby '3.1.2'
 
-gem "rails", "~> 7.0.4"
+gem 'rails', '~> 7.0.4'
 
-gem "sprockets-rails"
+gem 'sprockets-rails'
 
-gem "sqlite3", "~> 1.4"
+gem 'sqlite3', '~> 1.4'
 
-gem "puma", "~> 5.0"
+gem 'puma', '~> 5.0'
 
-gem "importmap-rails"
+gem 'importmap-rails'
 
-gem "turbo-rails"
+gem 'turbo-rails'
 
-gem "stimulus-rails"
+gem 'stimulus-rails'
 
-gem "jbuilder"
+gem 'jbuilder'
+
+gem 'httparty'
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
@@ -30,10 +32,10 @@ gem "jbuilder"
 gem 'devise'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
+gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 # Reduces boot times through caching; required in config/boot.rb
-gem "bootsnap", require: false
+gem 'bootsnap', require: false
 
 # Use Sass to process CSS
 # gem "sassc-rails"
@@ -43,14 +45,14 @@ gem "bootsnap", require: false
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
-  gem "debug", platforms: %i[ mri mingw x64_mingw ]  
-  gem "pry"
-  gem "rspec-rails"
+  gem 'debug', platforms: %i[mri mingw x64_mingw]
+  gem 'pry'
+  gem 'rspec-rails'
 end
 
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
-  gem "web-console"
+  gem 'web-console'
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
@@ -61,9 +63,9 @@ end
 
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
-  gem "capybara"
-  gem "selenium-webdriver"
-  gem "webdrivers"
+  gem 'capybara'
+  gem 'selenium-webdriver'
+  gem 'webdrivers'
 end
 
 gem 'pg'
