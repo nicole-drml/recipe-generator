@@ -41,7 +41,10 @@ class Users::RegistrationsController < Devise::RegistrationsController
   #   super
   # end
 
-  # protected
+  protected
+    def sign_up(resource_name, resource)
+      true
+    end
   #   def configure_permitted_parameters
   #     devise_parameter_sanitizer.permit(:sign_up, keys: [:first_name, :last_name])
   #   end
@@ -68,10 +71,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # def after_inactive_sign_up_path_for(resource)
   #   super(resource)
   # end
-  protected
-  def after_register_path_for(resource)
-    super(resource)
-  end
 
   private
 
