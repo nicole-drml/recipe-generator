@@ -13,3 +13,16 @@
  *= require_tree .
  *= require_self
  */
+
+ *, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   }
+
+   button, a {
+      text-decoration: none;
+      transition: 300ms;
+      width: 100%;
+      cursor: pointer;
+  }
