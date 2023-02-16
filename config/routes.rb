@@ -5,11 +5,8 @@ Rails.application.routes.draw do
   end
 
 
-  # get 'home/index'
   root 'home#index' 
   get '/dashboard' => 'dashboard#index'
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  get '/dashboard/search' => 'dashboard#search', as: 'dashboard/search'
 
-  # Defines the root path route ("/")
-  # root "articles#index"
 end

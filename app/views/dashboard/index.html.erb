@@ -1,4 +1,10 @@
 <h1>Dashboard</h1>
 
 
-<p><%= RecipeService.get_chicken_recipe%></p>
+<%= form_tag dashboard_search_path, method: :get do %>
+    <p>
+        <%= text_field_tag :query %>
+        <%= submit_tag "Search" %>
+    </p>
+<% end %>
+
