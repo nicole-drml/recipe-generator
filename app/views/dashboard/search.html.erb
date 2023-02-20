@@ -1,5 +1,18 @@
 
 <h1>Dashboard Search</h1>
 
+<%= form_tag dashboard_search_path, method: :get do %>
+    <p>
+        <%= text_field_tag :query, @query %>
+        <%= submit_tag "Search" %></br>
+        <span>Diet:</span>
+        <%= select_tag(:diet, options_for_select([[" ", ], ["Balanced", 'balanced'], ["High-fiber", 'high-fiber'], ["Low-carb", 'low-carb'], ["Low-fat", 'low-fat'], ["Low-sodium", 'low-sodium']], @diet)) %>
+
+    </p>
+<% end %>
+
 <p><%= @search_response %></p>
 
+
+<span><%= @diet %></span>
+<span><%=  "https://api.edamam.com/api/recipes/v2?type=public&q=#{@query}&app_id=#{@app_id}&app_key=#{@app_key}&diet=#{@diet}" %></span>
