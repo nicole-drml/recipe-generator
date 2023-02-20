@@ -1,12 +1,13 @@
 
 <h1>Dashboard Search</h1>
-
 <%= form_tag dashboard_search_path, method: :get do %>
     <p>
         <%= text_field_tag :query, @query %>
         <%= submit_tag "Search" %></br>
         <span>Diet:</span>
-        <%= select_tag(:diet, options_for_select([[" ", ], ["Balanced", 'balanced'], ["High-fiber", 'high-fiber'], ["Low-carb", 'low-carb'], ["Low-fat", 'low-fat'], ["Low-sodium", 'low-sodium']], @diet)) %>
+        <%= select_tag 'diet[]', options_for_select(@diet_array.map { |d| [d.titleize, d.downcase] }) %>
+        <span>Health:</span>
+        <%= select_tag 'health[]', options_for_select(@health_array.map { |h| [h.titleize, h.downcase] }) %>
 
     </p>
 <% end %>
