@@ -3,5 +3,11 @@
 
 <%= render "queries" %>
 
-<p><%= @search_response %></p>
+<div>
+  <%= @search_response.map do |recipe| %>
+    <h4><%= recipe['recipe']['label'] %></h4>
+    <img src="<%= recipe['recipe']['image'] %>"/>
+  <% end %>
+</div>
+
 
