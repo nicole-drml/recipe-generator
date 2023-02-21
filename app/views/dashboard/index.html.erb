@@ -1,9 +1,4 @@
 <h1>Dashboard</h1>
 
 
-<%= form_tag dashboard_search_path, method: :get do %>
-        <%= text_field_tag :query %>
-        <%= select_tag(:diet, options_for_select([[" ", ], ["Balanced", 'balanced']])) %>
-        <%= submit_tag "Search" %>
-<% end %>
-
+<%= render "queries" %>
