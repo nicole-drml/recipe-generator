@@ -10,13 +10,14 @@ class DashboardController < ApplicationController
     @health = params[:health]
     @cuisine = params[:cuisine]
     @dish = params[:dish]
+    @exclude = params[:exclude]
     get_api
   end
 
   def get_api
     return unless @query
 
-    @search_response = SearchService.search(@query, @diet, @health, @cuisine, @dish)
+    @search_response = SearchService.search(@query, @diet, @health, @cuisine, @dish, @exclude)
   end
 
   private
