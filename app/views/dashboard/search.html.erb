@@ -3,11 +3,14 @@
 
 <%= render "queries" %>
 
-<div>
-  <%= @search_response.map do |recipe| %>
-    <h4><%= recipe['recipe']['label'] %></h4>
-    <img src="<%= recipe['recipe']['image'] %>"/>
-  <% end %>
+
+<div class="recipe_response">
+    <% @search_response.map do |recipe| %>
+        <%= link_to recipe['recipe']['url'] do %>
+            <div class="recipe_block">
+                <h4><%= recipe['recipe']['label'] %></h4>
+                <img src="<%= recipe['recipe']['image'] %>"/>
+            </div>
+        <% end %> 
+    <% end %> 
 </div>
-
-
