@@ -6,10 +6,12 @@
     margin-right: auto;
     width: 50%;
     .recipe_block {
-        background-color: lightblue;
+        background-color: rgb(230, 230, 211);
+        padding: 1.5em;
     }
 
     a {
+        text-align: center;
         color: black;
     }
 }
