@@ -14,6 +14,6 @@ class SearchService
       request_url.concat("&dishType=#{dishstr}")
     end
     response = HTTParty.get(request_url)
-    recipes = response['hits']
+    @recipes = response['hits']
   end
 end
