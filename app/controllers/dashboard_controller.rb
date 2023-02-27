@@ -17,6 +17,7 @@ class DashboardController < ApplicationController
     return unless @query
 
     @search_response = SearchService.search(@query, @diet, @health, @cuisine, @dish)
+
   end
 
   private

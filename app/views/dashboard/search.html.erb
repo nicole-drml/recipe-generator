@@ -6,11 +6,25 @@
 
 <div class="recipe_response">
     <% @search_response.map do |recipe| %>
-        <%= link_to recipe['recipe']['url'] do %>
             <div class="recipe_block">
-                <h4><%= recipe['recipe']['label'] %></h4>
-                <img src="<%= recipe['recipe']['image'] %>"/>
+                <%= link_to recipe['recipe']['url'] do %>
+                    <div class="recipe_link_block">
+                        <h4><%= recipe['recipe']['label'] %></h4>
+                        <img src="<%= recipe['recipe']['image'] %>"/> </br>
+                        <% @recipe_text = recipe['recipe']['ingredients'] %>
+                        <% i = 0 %>
+                        <h5 class="ingredients_h5"> Ingredients: </h5> 
+                            <% while i < @recipe_text.count do %>
+                                <% if i == @recipe_text.count - 1 %>
+                                    <span> <%= @recipe_text[i]['food'] %> </span>
+                                <% else %>
+                                    <span> <%= @recipe_text[i]['food'] %>, </span>
+                                <% end %>
+                                <% i += 1 %>
+                            <% end %>
+                    </div>
+                <% end %> 
+                <i class="fa-regular fa-heart"></i>
             </div>
-        <% end %> 
     <% end %> 
 </div>

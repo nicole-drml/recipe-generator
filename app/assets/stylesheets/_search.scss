@@ -8,6 +8,15 @@
     .recipe_block {
         background-color: rgb(230, 230, 211);
         padding: 1.5em;
+
+
+        .ingredients_h5 {
+            display: inline-block;
+        }
+        .fa-heart {
+            padding: 2px;
+            margin-left: auto;
+        }
     }
 
     a {

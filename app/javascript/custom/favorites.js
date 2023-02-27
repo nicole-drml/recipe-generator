@@ -1,0 +1,1 @@
+const emptyHeart = document.querySelector("#empty_heart");
