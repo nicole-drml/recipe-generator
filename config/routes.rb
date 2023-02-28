@@ -9,4 +9,6 @@ Rails.application.routes.draw do
   get '/dashboard' => 'dashboard#index'
   get '/dashboard/search' => 'dashboard#search', as: 'dashboard/search'
 
+  # get '/favorites' => 'favorites#new'
+  # post '/favorites' => 'favorites#create'
 end

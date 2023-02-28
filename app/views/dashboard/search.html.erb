@@ -1,15 +1,50 @@
+<script>
+    function favorite(el) {
+        el.style.display = "none"
+        // document.querySelector(`filled_heart$`).style.display = "block"
+        console.log("favorite", el)
+    }    
+    
+   // function unfavorite(el) {
+     //   el.style.display = "block"
+       // el.style.display = "none"
+        //console.log("unfavorite", el)
+    //}
+</script>
 
 <h1>Dashboard Search</h1>
 
 <%= render "queries" %>
 <div class="recipe_response">
+
     <% @paginatable_array.map do |recipe| %>
         <%= link_to recipe['recipe']['url'] do %>
             <div class="recipe_block">
-                <h4><%= recipe['recipe']['label'] %></h4>
-                <img src="<%= recipe['recipe']['image'] %>"/>
+                <%= link_to @recipe_url = recipe['recipe']['url'] do %>
+                    <div class="recipe_link_block">
+                        <h4><%= @recipe_name = recipe['recipe']['label'] %></h4>
+                        <img src="<%= @recipe_image = recipe['recipe']['image'] %>"/> </br>
+                    </div>
+                <% end %> 
+                <% @recipe_text = recipe['recipe']['ingredients'] %>
+                        <% i = 0 %>
+                        <% @ingredients = '' %>
+                        <h5 class="ingredients_h5"> Ingredients: </h5> 
+                            <% while i < @recipe_text.count do %>
+                                <% if i == @recipe_text.count - 1 %>
+                                    <span> and <%= @recipe_text[i]['food'] %> </span>
+                                    <% @ingredients.concat("and #{@recipe_text[i]['food'].titleize}") %>
+
+
+                                <% else %>
+                                    <span> <%= @recipe_text[i]['food'] %>, </span>
+                                    <% @ingredients.concat("#{@recipe_text[i]['food'].titleize}, ") %>
+                                <% end %>
+                                <% i += 1 %>
+                            <% end %> </br>
+                <i class="fa-regular fa-heart empty_heart" id="empty_heart" onclick="favorite(this)"></i>
+                <i class="fa-solid fa-heart filled_heart" id="filled_heart" onclick="unfavorite(this)"></i>
             </div>
-        <% end %> 
     <% end %> 
 </div>
 
