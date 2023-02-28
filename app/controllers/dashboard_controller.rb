@@ -17,6 +17,23 @@ class DashboardController < ApplicationController
     return unless @query
 
     @search_response = SearchService.search(@query, @diet, @health, @cuisine, @dish)
+    
+    # @search_response.map do |recipe| 
+    #   @url = recipe['recipe']['url']
+    #   @label = recipe['recipe']['label']
+    #   @image = recipe['recipe']['image']
+    #   @recipe_text = recipe['recipe']['ingredients']
+    #   i = 0
+    #   @ingredients = ''
+    #   while i < @recipe_text.count do 
+    #     if i == @recipe_text.count - 1 
+    #       @ingredients.concat("and #{@recipe_text[i]['food']}")
+    #     else
+    #       @ingredients.concat("#{@recipe_text[i]['food']},")
+    #     end
+    #     i += 1
+    #   end
+    # end
 
   end
 

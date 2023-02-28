@@ -9,13 +9,29 @@
         background-color: rgb(230, 230, 211);
         padding: 1.5em;
 
+        .recipe_link_block {
+            padding: 10px 4px;
+            &:hover {
+                // background-color: rgba(230, 230, 211, 0.9);
+                background-color: rgba(163, 163, 145, 0.05);
+
+            }
+        }
 
         .ingredients_h5 {
             display: inline-block;
         }
-        .fa-heart {
+        .fa-regular {
+            margin-left: 95%;
             padding: 2px;
-            margin-left: auto;
+            cursor: pointer;
+        }
+        .fa-solid {
+            margin-left: 95%;
+            padding: 2px;
+            cursor: pointer;
+            display: none;
+
         }
     }
 
