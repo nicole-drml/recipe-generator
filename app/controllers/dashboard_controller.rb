@@ -10,31 +10,16 @@ class DashboardController < ApplicationController
     @health = params[:health]
     @cuisine = params[:cuisine]
     @dish = params[:dish]
+    @exclude = params[:exclude]
     get_api
   end
 
   def get_api
     return unless @query
 
-    @search_response = SearchService.search(@query, @diet, @health, @cuisine, @dish)
-    
-    # @search_response.map do |recipe| 
-    #   @url = recipe['recipe']['url']
-    #   @label = recipe['recipe']['label']
-    #   @image = recipe['recipe']['image']
-    #   @recipe_text = recipe['recipe']['ingredients']
-    #   i = 0
-    #   @ingredients = ''
-    #   while i < @recipe_text.count do 
-    #     if i == @recipe_text.count - 1 
-    #       @ingredients.concat("and #{@recipe_text[i]['food']}")
-    #     else
-    #       @ingredients.concat("#{@recipe_text[i]['food']},")
-    #     end
-    #     i += 1
-    #   end
-    # end
-
+    @search_response = SearchService.search(@query, @diet, @health, @cuisine, @dish, @exclude)
+    @paginatable_array = Kaminari.paginate_array(@search_response,
+                                                 total_count: @search_response.count).page(params[:page]).per(7)
   end
 
   private

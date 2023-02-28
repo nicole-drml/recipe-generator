@@ -15,11 +15,10 @@
 <h1>Dashboard Search</h1>
 
 <%= render "queries" %>
-
-
 <div class="recipe_response">
 
-    <% @search_response.map do |recipe| %>
+    <% @paginatable_array.map do |recipe| %>
+        <%= link_to recipe['recipe']['url'] do %>
             <div class="recipe_block">
                 <%= link_to @recipe_url = recipe['recipe']['url'] do %>
                     <div class="recipe_link_block">
@@ -48,3 +47,6 @@
             </div>
     <% end %> 
 </div>
+
+<%= paginate @paginatable_array %>
+
