@@ -1,0 +1,5 @@
+one: 
+  first_name: Curry
+  last_name: Chef
+  email: curry@chef.com
+  encrypted_password: password

@@ -7,7 +7,12 @@ Rails.application.routes.draw do
   root 'home#index'
   get '/dashboard' => 'dashboard#index'
   get '/dashboard/search' => 'dashboard#search', as: 'dashboard/search'
+  get '/favorites/saverecipe' => 'favorites#save_recipe', as: 'favorites/save_recipe'
+
+
+  post '/favorites' => 'favorites#create', as: 'create_favorite'
+  get '/favorites/new' => 'favorites#new', as: 'new_favorite'
+  
   get '/dashboard/random_recipe', to: 'random_recipe#index', as: 'random_recipe'
-  # get '/favorites' => 'favorites#new'
-  # post '/favorites' => 'favorites#create'
+  
 end

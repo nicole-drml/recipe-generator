@@ -1,15 +1,34 @@
 <script>
+
+
     function favorite(el) {
+        event.preventDefault();
         el.style.display = "none"
-        // document.querySelector(`filled_heart$`).style.display = "block"
+        el.nextElementSibling.style.display = "block"
         console.log("favorite", el)
+        const recipeName = el.getAttribute('data-recipe-name')
+        const recipeUrl = el.getAttribute('data-recipe-url')
+        const recipeIngredients= el.getAttribute('data-recipe-ingredients')
+        const recipeImage= el.getAttribute('data-recipe-image')
+
+        const get_url = new XMLHttpRequest();
+        get_url.open('GET', '<%= new_favorite_path %>' + '?variable_name=' + recipeName + '&variable_url=' + recipeUrl + '&variable_ing=' + recipeIngredients + '&variable_image=' + recipeImage )
+        get_url.onload = function() {
+
+            if (get_url.status === 200) {
+                console.log('get url success', get_url.responseText)
+            } else {
+                console.log('Request failed. Returned status of ' + get_url.status);
+            }
+        };
+        get_url.send();
     }    
-    
-   // function unfavorite(el) {
-     //   el.style.display = "block"
-       // el.style.display = "none"
-        //console.log("unfavorite", el)
-    //}
+
+   function unfavorite(el) {
+        el.style.display = "none"
+        el.previousElementSibling.style.display = "block"
+        console.log("unfavorite", el)
+    }
 </script>
 
 <h1>Dashboard Search</h1>
@@ -20,32 +39,35 @@
     <% @paginatable_array.map do |recipe| %>
         <%= link_to recipe['recipe']['url'] do %>
             <div class="recipe_block">
-                <%= link_to @recipe_url = recipe['recipe']['url'] do %>
+                <%= link_to recipe['recipe']['url'] do %>
                     <div class="recipe_link_block">
-                        <h4><%= @recipe_name = recipe['recipe']['label'] %></h4>
-                        <img src="<%= @recipe_image = recipe['recipe']['image'] %>"/> </br>
+                        <h4><%= recipe['recipe']['label'] %></h4>
+                        <img src="<%= recipe['recipe']['image'] %>"/> </br>
                     </div>
                 <% end %> 
+
                 <% @recipe_text = recipe['recipe']['ingredients'] %>
                         <% i = 0 %>
                         <% @ingredients = '' %>
-                        <h5 class="ingredients_h5"> Ingredients: </h5> 
                             <% while i < @recipe_text.count do %>
-                                <% if i == @recipe_text.count - 1 %>
-                                    <span> and <%= @recipe_text[i]['food'] %> </span>
-                                    <% @ingredients.concat("and #{@recipe_text[i]['food'].titleize}") %>
-
-
+                                <% if i == 0 %>
+                                    <% @ingredients.concat("#{@recipe_text[i]['food'].capitalize} ") %>
+                                <% elsif i == @recipe_text.count - 1 %>
+                                    <% @ingredients.concat("and #{@recipe_text[i]['food'].downcase}.") %>
                                 <% else %>
-                                    <span> <%= @recipe_text[i]['food'] %>, </span>
-                                    <% @ingredients.concat("#{@recipe_text[i]['food'].titleize}, ") %>
+                                    <% @ingredients.concat("#{@recipe_text[i]['food'].downcase}, ") %>
                                 <% end %>
                                 <% i += 1 %>
                             <% end %> </br>
-                <i class="fa-regular fa-heart empty_heart" id="empty_heart" onclick="favorite(this)"></i>
+                        
+                        <h5 class="ingredients_h5"> Ingredients: <span> <%= @ingredients %> </span> </h5>
+
+                <i class="fa-regular fa-heart empty_heart" id="empty_heart" onclick="favorite(this)" data-recipe-name= "<%= recipe['recipe']['label'] %>" data-recipe-url= "<%= recipe['recipe']['url'] %>" data-recipe-ingredients= "<%= @ingredients %>" data-recipe-image= "<%=recipe['recipe']['image'] %>" ></i>
+
+                        
                 <i class="fa-solid fa-heart filled_heart" id="filled_heart" onclick="unfavorite(this)"></i>
             </div>
-          <% end %> 
+        <% end %> 
     <% end %> 
 </div>
 
