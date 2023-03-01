@@ -1,0 +1,2 @@
+module RandomRecipeHelper
+end

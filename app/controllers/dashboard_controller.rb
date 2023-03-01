@@ -21,7 +21,7 @@ class DashboardController < ApplicationController
 
     @search_response = SearchService.search(@query, @diet, @health, @cuisine, @dish, @exclude)
     @paginatable_array = Kaminari.paginate_array(@search_response,
-                                                 total_count: @search_response.count).page(params[:page]).per(7)
+                                                 total_count: @search_response.count).page(params[:page]).per(5)
   end
 
   private
