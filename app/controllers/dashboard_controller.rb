@@ -2,7 +2,8 @@ class DashboardController < ApplicationController
   before_action :authenticate_user!
   before_action :query_options
 
-  def index; end
+  def index
+  end
 
   def search
     @query = params[:query]
@@ -12,7 +13,6 @@ class DashboardController < ApplicationController
     @dish = params[:dish]
     @exclude = params[:exclude]
     get_api
-
     
   end
 
