@@ -11,6 +11,9 @@ Rails.application.routes.draw do
 
   get '/favorites/saverecipe' => 'favorites#save_recipe', as: 'favorites/save_recipe'
 
+
+  post '/favorites' => 'favorites#create', as: 'create_favorite'
+  get '/favorites/new' => 'favorites#new', as: 'new_favorite'
   # get '/favorites' => 'favorites#new'
   # post '/favorites' => 'favorites#create'
 end

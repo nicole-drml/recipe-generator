@@ -12,7 +12,7 @@
         const recipeImage= el.getAttribute('data-recipe-image')
 
         const get_url = new XMLHttpRequest();
-        get_url.open('GET', '<%= favorites_save_recipe_path %>' + '?variable_name=' + recipeName + '&variable_url=' + recipeUrl + '&variable_ing=' + recipeIngredients + '&variable_image=' + recipeImage )
+        get_url.open('GET', '<%= new_favorite_path %>' + '?variable_name=' + recipeName + '&variable_url=' + recipeUrl + '&variable_ing=' + recipeIngredients + '&variable_image=' + recipeImage )
         get_url.onload = function() {
 
             if (get_url.status === 200) {

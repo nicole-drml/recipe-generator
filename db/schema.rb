@@ -17,8 +17,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_27_111501) do
   create_table "favorites", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "name"
-    t.string "image_link"
+    t.integer "user_id", null: false
+    t.string "name", null: false
+    t.string "url"
+    t.string "image"
     t.string "ingredients"
   end
 
