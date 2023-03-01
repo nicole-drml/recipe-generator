@@ -4,11 +4,10 @@ Rails.application.routes.draw do
     post 'register', to: 'devise/registrations#create'
   end
 
-
-  root 'home#index' 
+  root 'home#index'
   get '/dashboard' => 'dashboard#index'
   get '/dashboard/search' => 'dashboard#search', as: 'dashboard/search'
-
+  get '/dashboard/random_recipe', to: 'random_recipe#index', as: 'random_recipe'
   # get '/favorites' => 'favorites#new'
   # post '/favorites' => 'favorites#create'
 end
