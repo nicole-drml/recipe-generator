@@ -12,6 +12,8 @@ class DashboardController < ApplicationController
     @dish = params[:dish]
     @exclude = params[:exclude]
     get_api
+
+    
   end
 
   def get_api
