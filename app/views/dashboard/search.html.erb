@@ -2,14 +2,15 @@
     function favorite(el) {
         el.style.display = "none"
         // document.querySelector(`filled_heart$`).style.display = "block"
+        el.nextElementSibling.style.display = "block"
         console.log("favorite", el)
     }    
     
-   // function unfavorite(el) {
-     //   el.style.display = "block"
-       // el.style.display = "none"
-        //console.log("unfavorite", el)
-    //}
+   function unfavorite(el) {
+        el.style.display = "none"
+        el.previousElementSibling.style.display = "block"
+        console.log("unfavorite", el)
+    }
 </script>
 
 <h1>Dashboard Search</h1>
@@ -29,22 +30,23 @@
                 <% @recipe_text = recipe['recipe']['ingredients'] %>
                         <% i = 0 %>
                         <% @ingredients = '' %>
-                        <h5 class="ingredients_h5"> Ingredients: </h5> 
                             <% while i < @recipe_text.count do %>
-                                <% if i == @recipe_text.count - 1 %>
-                                    <span> and <%= @recipe_text[i]['food'] %> </span>
-                                    <% @ingredients.concat("and #{@recipe_text[i]['food'].titleize}") %>
-
-
+                                <% if i == 0 %>
+                                    <% @ingredients.concat("#{@recipe_text[i]['food'].capitalize} ") %>
+                                <% elsif i == @recipe_text.count - 1 %>
+                                    <% @ingredients.concat("and #{@recipe_text[i]['food'].downcase}.") %>
                                 <% else %>
-                                    <span> <%= @recipe_text[i]['food'] %>, </span>
-                                    <% @ingredients.concat("#{@recipe_text[i]['food'].titleize}, ") %>
+                                    <% @ingredients.concat("#{@recipe_text[i]['food'].downcase}, ") %>
                                 <% end %>
                                 <% i += 1 %>
                             <% end %> </br>
+                        
+                        <h5 class="ingredients_h5"> Ingredients: <span> <%= @ingredients %> </span> </h5>
                 <i class="fa-regular fa-heart empty_heart" id="empty_heart" onclick="favorite(this)"></i>
                 <i class="fa-solid fa-heart filled_heart" id="filled_heart" onclick="unfavorite(this)"></i>
             </div>
+        <% end %> 
+
     <% end %> 
 </div>
 
