@@ -3,6 +3,8 @@
         <%= text_field_tag :query, @query %>
 
         <%= submit_tag "Search" %></br>
+
+        <p>Filters <span>(optional)</span></p>
         <span>Diet:</span>
         <%= select_tag(:diet, options_for_select(@diet_array.map { |d| [d, d] },  @diet))%>
         <span>Health:</span>
