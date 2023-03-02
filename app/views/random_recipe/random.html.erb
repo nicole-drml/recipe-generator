@@ -3,8 +3,10 @@
 <div class="random_recipe_response">
   <div class="random_recipe_block">
     <div class="random_recipe_link">
+    <%= link_to @random_recipe['recipe']['url'] do %>
         <h4><%= @random_recipe['recipe']['label'] %></h4>
         <img src="<%= @random_recipe['recipe']['image'] %>"/>
+    <% end %>
         <p><% @random_ing = @random_recipe['recipe']['ingredients'] %></p>
         <% i = 0 %>
         <% @randing = '' %>
