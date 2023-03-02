@@ -1,0 +1,25 @@
+<h2>Random Recipe of the Day:</h2>
+
+<div class="random_recipe_response">
+  <div class="random_recipe_block">
+    <div class="random_recipe_link">
+        <h4><%= @random_recipe['recipe']['label'] %></h4>
+        <img src="<%= @random_recipe['recipe']['image'] %>"/>
+        <p><% @random_ing = @random_recipe['recipe']['ingredients'] %></p>
+        <% i = 0 %>
+        <% @randing = '' %>
+            <% while i < @random_ing.count do %>
+                <% if i == 0 %>
+                    <% @randing.concat("#{@random_ing[i]['food'].capitalize} ") %>
+                <% elsif i == @random_ing.count - 1 %>
+                    <% @randing.concat("and #{@random_ing[i]['food'].downcase}.") %>
+                <% else %>
+                    <% @randing.concat("#{@random_ing[i]['food'].downcase}, ") %>
+                <% end %>
+                <% i += 1 %>
+            <% end %> </br>
+            <h5 class="ingredients_h5"> Ingredients: <span> <%= @randing %> </span> </h5>
+
+    </div>
+  </div>
+</div>
