@@ -64,9 +64,10 @@
 
                 <i class="fa-regular fa-heart empty_heart" id="empty_heart" onclick="favorite(this)" data-recipe-name= "<%= recipe['recipe']['label'] %>" data-recipe-url= "<%= recipe['recipe']['url'] %>" data-recipe-ingredients= "<%= @ingredients %>" data-recipe-image= "<%=recipe['recipe']['image'] %>" ></i>
 
-                        
                 <i class="fa-solid fa-heart filled_heart" id="filled_heart" onclick="unfavorite(this)"></i>
+                 
             </div>
+            
         <% end %> 
 
     <% end %> 
