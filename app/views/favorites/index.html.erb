@@ -1,0 +1,16 @@
+<h1>FAVORITES of 
+<% @user = current_user.first_name %> 
+<%= @user %>
+</h1>
+<% @favorites.sort.each do |favorite| %>
+    <div id="each_favorite_container">
+        <div id="favorite_card_name">
+            <%= link_to favorite.url do %>
+                <%= favorite.name.upcase %>
+            <% end %>
+            <%= link_to delete_favorite_path(favorite.id), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete #{favorite.name}?" }, :id => "delete_favorite_link" do %>
+                <i class="fa-solid fa-heart filled_heart" id="filled_heart" onclick="unfavorite(this)"></i>
+            <% end %>
+        </div>
+    </div>
+<% end %>
