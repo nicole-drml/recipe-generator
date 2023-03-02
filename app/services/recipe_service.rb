@@ -14,9 +14,4 @@ class RecipeService
       recipe['recipe']['label']
     end
   end
-
 end
-
-
-
-
