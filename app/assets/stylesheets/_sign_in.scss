@@ -1,0 +1,26 @@
+#new_user {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10vh;
+    width: 30vw;
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    align-items: center;
+    gap: 5px;
+    border: 2px solid black;
+
+    input {
+        padding: 2px;
+    }
+
+    em {
+        font-size: .7em;
+    }
+
+    #password_confirmation {
+        font-size: .85em;
+    }
+}
