@@ -1,5 +1,5 @@
 # What's your Ulam Pare?
-> This is a recipe generator project
+> This is a recipe generator project built on Rails
 ---
 ## Usage
 1. If you are a first time user, please register first
