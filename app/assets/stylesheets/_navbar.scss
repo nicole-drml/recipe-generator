@@ -15,38 +15,64 @@
         #wyup-span {
             font-family: 'Climate Crisis', cursive;
             display: block;
+            font-size: .8em;
         }
     }
-    .curret_user_nav {
+
+    .current_user_nav {
+        border: 1px solid black;
+        border-radius: 5px;
+        background-color: rgba(250, 235, 215, .6);
+        display: flex;
+        align-items: center;
+
+        span {
+            font-size: .6em;
+            padding: 2px 4px;
+        }
+    }
+
+    #page-links {
+        margin-right: auto;
         margin-left: auto;
-       
+        font-size: .85em;
+
+        a {
+            border-bottom: 2px solid white;
+            &:hover {
+                transition: 300ms;
+                border-bottom: 2px solid black;
+            }
+        }
     }
 
     .nav-btns {
-        width: 200px;
         display: flex;
-        justify-content: space-between;
-        button {
-            padding: 10px;
-            border: none;
-            background-color: white;
+        gap: 20px;
 
-            a {
-                font-size: 1.5em;
-                font-style: none;
-                text-decoration: none;
-                color: black;
-                border-bottom: 3px solid white;
-                padding-bottom: 2px;
+        .nav_current_buttons {
+            width: 120px;
+            display: flex;
 
+            button {
+                padding: 2px;
+                border: none;
+                background-color: white;
+                border-bottom: 1.7px solid white;
+    
+                a {
+                    font-size: 1em;
+                    font-style: none;
+                    text-decoration: none;
+                    color: black;
+                }
+    
                 &:hover {
-                    border-bottom: 3px solid black;
+                    transition: 300ms;
+                    border-bottom: 1.7px solid black;
                 }
             }
-
-            &:hover {
-                transition: 300ms;
-            }
         }
+
     }
 }

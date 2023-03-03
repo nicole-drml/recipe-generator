@@ -1,20 +1,22 @@
-<h1>FAVORITES of 
-<% @user = current_user.first_name %> 
+<h1 id="h1_favorites">Saved Recipes of 
+<% @user = current_user.first_name.capitalize %> 
 <%= @user %>
 </h1>
-<% @favorites.sort.each do |favorite| %>
-    <div class="random_recipe_response">
-        <div class="random_recipe_block">
-          <div class="random_recipe_link">
-                  <%= link_to favorite.url do %>
-                  <%= favorite.name.upcase %>
-                  <%= favorite.ingredients %>
-              <% end %>
-              <%= link_to delete_favorite_path(favorite.id), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete #{favorite.name}?" }, :id => "delete_favorite_link" do %>
-                  <i class="fa-solid fa-heart filled_heart" id="filled_heart" onclick="unfavorite(this)"></i>
-              <% end %>
-          </div>
-
-        </div>
-    </div>
-<% end %>
+<div id="favorites_recipe_container">
+    <% @favorites.sort.each do |favorite| %>
+        <div class="favorites_recipe_block">
+            <div class="favorites_recipe_link">
+                <%= link_to favorite.url do %>
+                    <h3><%= favorite.name.upcase %></h3>
+                    <span>Ingredients:</span>
+                    <%= favorite.ingredients %>
+                <% end %>
+            </div>
+            <div id="heart_favorites_container">
+                <%= link_to delete_favorite_path(favorite.id), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete #{favorite.name}?" }, :id => "delete_favorite_link filled_heart" do %>
+                    <%= image_tag("filled_heart.png") %>
+                <% end %>
+            </div>
+            </div>
+    <% end %>
+</div>

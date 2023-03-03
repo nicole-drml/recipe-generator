@@ -1,0 +1,40 @@
+#h1_favorites {
+    margin-left: 10px;
+    padding: 10px;
+    font-size: 1.2em;
+}
+
+#favorites_recipe_container {
+    width: 100vw;
+    background-color: rgb(230, 230, 211);
+}
+.favorites_recipe_block {
+    padding: 1.5em;
+    border-bottom: 1px solid black;
+    text-align: left;
+    width: 70vw;
+    margin-left: auto;
+    margin-right: auto;
+
+    .favorites_recipe_link {
+        padding: 10px 4px;
+
+    }
+    a {
+        display: block;
+        border: none;
+        background-color:  rgb(230, 230, 211);
+        width: fit-content;
+        img {
+            width: 20px;
+            margin-left: auto;
+        }
+    }
+
+    #heart_favorites_container {
+
+        a {
+            margin-left: auto;
+        }
+    }
+}
