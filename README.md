@@ -1,5 +1,5 @@
 # What's your Ulam Pare?
-> This is a recipe generator project built on Rails
+> This is a recipe generator project built on Rails that help users generate a recipe based on dietary preferences or ingredients they have on hand.
 ---
 ## Usage
 1. If you are a first time user, please register first
