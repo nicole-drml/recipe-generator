@@ -4,7 +4,7 @@
 ## Usage
 1. If you are a first time user, please register first
 
-![register](https://user-images.githubusercontent.com/68190784/222622060-ddfd14b9-3108-4b73-9d1d-dc2b49493953.png)
+![image](https://user-images.githubusercontent.com/68190784/222640755-46647551-c281-40f8-b2c2-904a0ef75aad.png)
 
 
 2. Log in to the page
