@@ -28,7 +28,8 @@ You can also filter the results on the optional filters provided.
 
 5. Upon searching, you can click the heart icon to save the recipe as your Favorites.
 
-![save_recipe](https://user-images.githubusercontent.com/68190784/222642854-5f8907cc-da27-48a9-b2ec-342b2715d496.png)
+![image](https://user-images.githubusercontent.com/68190784/222705542-e0d15ab2-7125-4f6e-ab05-706b75cf46df.png)
+
 
 6. You can view your saved recipes in the Favorites tab.
 
