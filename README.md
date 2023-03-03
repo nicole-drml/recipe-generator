@@ -14,7 +14,7 @@
 
 3. Click Home to generate a random recipe 
 
-![image](https://user-images.githubusercontent.com/68190784/222626338-8cf1d832-1f38-46ac-b65a-7722cc635d64.png)
+![image](https://user-images.githubusercontent.com/68190784/222640973-38f6fc8b-aabe-4097-8868-89bddc7490d8.png)
 
 
 4. To search for recipes with ingredient, click on the Recipe Search.
