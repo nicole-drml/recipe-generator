@@ -34,4 +34,4 @@ You can also filter the results on the optional filters provided.
 
 ![image](https://user-images.githubusercontent.com/68190784/222675692-e059f002-9532-417b-8fa6-6050881783c9.png)
 
-7. Clicking in the image will redirect you to the website on how to cook the recipe.
+7. Clicking in the recipe will redirect you to the website on how to cook the recipe.
