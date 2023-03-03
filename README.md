@@ -32,4 +32,6 @@ You can also filter the results on the optional filters provided.
 
 6. You can view your saved recipes in the Favorites tab.
 
+![image](https://user-images.githubusercontent.com/68190784/222675692-e059f002-9532-417b-8fa6-6050881783c9.png)
+
 7. Clicking in the image will redirect you to the website on how to cook the recipe.
