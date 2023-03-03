@@ -9,7 +9,7 @@
 
 2. Log in to the page
 
-![sign in](https://user-images.githubusercontent.com/68190784/222623115-f5464895-043a-404e-af52-f744a0dd8f13.png)
+![image](https://user-images.githubusercontent.com/68190784/222640814-d41445cf-2190-43ee-b63f-33c9f6a49dfb.png)
 
 
 3. Click Home to generate a random recipe 
