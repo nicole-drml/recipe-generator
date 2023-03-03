@@ -21,17 +21,20 @@
         .ingredients_h5 {
             display: inline-block;
         }
-        .fa-regular {
-            margin-left: 95%;
-            padding: 2px;
-            cursor: pointer;
-        }
-        .fa-solid {
-            margin-left: 95%;
-            padding: 2px;
-            cursor: pointer;
+        #filled_heart{
             display: none;
 
+        }
+
+        button {
+            display: block;
+            border: none;
+            background-color:  rgb(230, 230, 211);
+            margin-left: auto;
+            width: fit-content;
+            img {
+                width: 20px;
+            }
         }
     }
 
@@ -41,3 +44,30 @@
     }
 }
 
+.pagination {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50vw;
+    padding: 5px;
+    margin-top: 8px;
+    justify-content: center;
+    align-items: center;
+
+    span {
+        padding: 2px 8px;
+        text-decoration: none;
+        border-radius: 5px;
+
+        &:hover:not(.current) {
+            background-color: #ddd;
+        }
+    }
+
+
+    .current {
+        background-color: #62C68D;
+        color: white;
+    }
+
+  }

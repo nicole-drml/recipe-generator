@@ -5,7 +5,6 @@
         event.preventDefault();
         el.style.display = "none"
         el.nextElementSibling.style.display = "block"
-        console.log("favorite", el)
         const recipeName = el.getAttribute('data-recipe-name')
         const recipeUrl = el.getAttribute('data-recipe-url')
         const recipeIngredients= el.getAttribute('data-recipe-ingredients')
@@ -32,6 +31,7 @@
 </script>
 
 <h1>Dashboard Search</h1>
+<% link_to(image_tag("heart.png"), root_path) %>
 
 <%= render "queries" %>
 <div class="recipe_response">
@@ -39,6 +39,7 @@
     <% @paginatable_array.map do |recipe| %>
         <%= link_to recipe['recipe']['url'] do %>
             <div class="recipe_block">
+            
                 <%= link_to recipe['recipe']['url'] do %>
                     <div class="recipe_link_block">
                         <h4><%= recipe['recipe']['label'] %></h4>
@@ -61,10 +62,14 @@
                             <% end %> </br>
                         
                         <h5 class="ingredients_h5"> Ingredients: <span> <%= @ingredients %> </span> </h5>
+                        
+                        <%= button_tag(id: "empty_heart", onclick: "favorite(this)", data: { recipe_name: recipe['recipe']['label'], recipe_url: recipe['recipe']['url'], recipe_ingredients: @ingredients, recipe_image: recipe['recipe']['image'] }) do %>
+                            <%= image_tag("heart.png") %>
+                        <% end %>
+                        <%= button_tag(id: "filled_heart", onclick: "unfavorite(this)") do %>
+                            <%= image_tag("filled_heart.png") %>
+                        <% end %>
 
-                <i class="fa-regular fa-heart empty_heart" id="empty_heart" onclick="favorite(this)" data-recipe-name= "<%= recipe['recipe']['label'] %>" data-recipe-url= "<%= recipe['recipe']['url'] %>" data-recipe-ingredients= "<%= @ingredients %>" data-recipe-image= "<%=recipe['recipe']['image'] %>" ></i>
-
-                <i class="fa-solid fa-heart filled_heart" id="filled_heart" onclick="unfavorite(this)"></i>
                  
             </div>
             
