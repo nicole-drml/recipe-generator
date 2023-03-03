@@ -54,21 +54,21 @@
             gap: 15px;
 
             .sign-out-btn {
-                border-bottom: 1.7px solid white;
-                span {
-                    padding: 2px;
-                    border: none;
-                    background-color: white;
-                    border-bottom: 1.7px solid white;
+                border-bottom: 1.7px solid white;                    
+
+                a {
+                    font-size: .9em;
+                    &:hover {
+                        color: rgb(110, 32, 32);
+                    }
                 }
                 &:hover {
                     transition: 300ms;
-                    border-bottom: 1.7px solid black;
+                    border-bottom: 1.7px solid rgb(110, 32, 32);
                 }
             }
-
-            
         }
+
         .no_session_buttons {
             width: 180px;
             display: flex;

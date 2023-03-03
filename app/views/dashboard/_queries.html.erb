@@ -1,10 +1,12 @@
 <%= form_tag dashboard_search_path, method: :get do %>
-    <p>
-        <%= text_field_tag :query, @query %>
 
+        <%= text_field_tag :query, @query %>
         <%= submit_tag "Search" %></br>
 
-        <p>Filters <span>(optional)</span></p>
+        <p id="filters_span">Filters <span>(optional)</span></p>
+
+        <span id="exclude_span">Exclude ingredient:</span>
+        <%= text_field_tag :exclude, @exclude %></br>
         <span>Diet:</span>
         <%= select_tag(:diet, options_for_select(@diet_array.map { |d| [d, d] },  @diet))%>
         <span>Health:</span>
@@ -13,9 +15,5 @@
         <%= select_tag(:cuisine, options_for_select(@cuisine_array.map { |c| [c, c] }, @cuisine)) %>
         <span>Dish Type:</span>
         <%= select_tag(:dish, options_for_select(@dish_array.map { |s| [s, s] }, @dish)) %>
-        <span>Exclude ingredient:</span>
-        <%= text_field_tag :exclude, @exclude %>
 
-
-    </p>
 <% end %>
