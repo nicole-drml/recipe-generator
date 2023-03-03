@@ -27,3 +27,6 @@ You can also filter the results on the optional filters provided.
 
 ![save_recipe](https://user-images.githubusercontent.com/68190784/222642854-5f8907cc-da27-48a9-b2ec-342b2715d496.png)
 
+6. You can view your saved recipes in the Favorites tab.
+
+7. Clicking in the image will redirect you to the website on how to cook the recipe.
