@@ -6,9 +6,15 @@
     background-color: rgba(238, 238, 238, 0.01);
     border-bottom: 3px solid rgb(35, 34, 33);
     .img-div {
+        display: flex;
+        align-items: center;
         img {
-            width: 100px;
+            width: 50px;
             cursor: pointer;
+        }
+        #wyup-span {
+            font-family: 'Climate Crisis', cursive;
+            display: block;
         }
     }
     .curret_user_nav {

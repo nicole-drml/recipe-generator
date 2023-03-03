@@ -35,7 +35,6 @@ class FavoritesController < ApplicationController
     if @favorite.save
       # flash[:notice] = 'Favorite was successfully created.'
       redirect_to favorites_path
-      # format.html { redirect_to favorites_path, notice: "favorite was successfully created." }
     else
       # flash[:alert] = "You've already saved this recipe."
       flash[:error] = "Something went wrong."

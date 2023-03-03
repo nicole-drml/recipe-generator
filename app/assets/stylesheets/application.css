@@ -26,6 +26,7 @@
       transition: 300ms;
       width: 100%;
       cursor: pointer;
+      color: black;
   }
 
   :visited {
