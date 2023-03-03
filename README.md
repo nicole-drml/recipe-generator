@@ -24,7 +24,7 @@
 Input the ingredients in the search bar. You can also search for recipes directly!
 You can also filter the results on the optional filters provided.
 
-![ingredient_search](https://user-images.githubusercontent.com/68190784/222640572-0cdf2a17-9a53-4ea3-bae3-c62406d41324.png)
+![image](https://user-images.githubusercontent.com/68190784/222705765-30c7dc07-9bad-4d6b-819d-ba5ee322e090.png)
 
 5. Upon searching, you can click the heart icon to save the recipe as your Favorites.
 
