@@ -24,16 +24,16 @@
 Input the ingredients in the search bar. You can also search for recipes directly!
 You can also filter the results on the optional filters provided.
 
-![image](https://user-images.githubusercontent.com/68190784/222705765-30c7dc07-9bad-4d6b-819d-ba5ee322e090.png)
+![recipe_search](https://user-images.githubusercontent.com/68190784/222705765-30c7dc07-9bad-4d6b-819d-ba5ee322e090.png)
 
 5. Upon searching, you can click the heart icon to save the recipe as your Favorites.
 
-![image](https://user-images.githubusercontent.com/68190784/222705542-e0d15ab2-7125-4f6e-ab05-706b75cf46df.png)
+![favorite_heart](https://user-images.githubusercontent.com/68190784/222705542-e0d15ab2-7125-4f6e-ab05-706b75cf46df.png)
 
 
 6. You can view your saved recipes in the Favorites tab.
 
-![image](https://user-images.githubusercontent.com/68190784/222675692-e059f002-9532-417b-8fa6-6050881783c9.png)
+![favorites_tab](https://user-images.githubusercontent.com/68190784/222675692-e059f002-9532-417b-8fa6-6050881783c9.png)
 
 7. Clicking in the recipe will redirect you to the website on how to cook the recipe.
 
