@@ -1,5 +1,5 @@
-<h1>FAVORITES of 
-<% @user = current_user.first_name %> 
+<h1>Saved Recipess of 
+<% @user = current_user.first_name.capitalize %> 
 <%= @user %>
 </h1>
 <% @favorites.sort.each do |favorite| %>
