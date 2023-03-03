@@ -30,53 +30,56 @@
     }
 </script>
 
-<h1>Dashboard</h1>
-<% link_to(image_tag("heart.png"), root_path) %>
+<div id="dashboard_search_container">
+    <h1>Dashboard</h1>
+    <% link_to(image_tag("heart.png"), root_path) %>
 
-<%= render "queries" %>
-<div class="recipe_response">
+    <%= render "queries" %>
+    <div class="recipe_response">
 
-    <% @paginatable_array.map do |recipe| %>
-        <%= link_to recipe['recipe']['url'] do %>
-            <div class="recipe_block">
-            
-                <%= link_to recipe['recipe']['url'] do %>
-                    <div class="recipe_link_block">
-                        <h4><%= recipe['recipe']['label'] %></h4>
-                        <img src="<%= recipe['recipe']['image'] %>"/> </br>
-                    </div>
-                <% end %> 
+        <% @paginatable_array.map do |recipe| %>
+            <%= link_to recipe['recipe']['url'] do %>
+                <div class="recipe_block">
+                
+                    <%= link_to recipe['recipe']['url'] do %>
+                        <div class="recipe_link_block">
+                            <h4><%= recipe['recipe']['label'] %></h4>
+                            <img src="<%= recipe['recipe']['image'] %>"/> </br>
+                        </div>
+                    <% end %> 
 
-                <% @recipe_text = recipe['recipe']['ingredients'] %>
-                        <% i = 0 %>
-                        <% @ingredients = '' %>
-                            <% while i < @recipe_text.count do %>
-                                <% if i == 0 %>
-                                    <% @ingredients.concat("#{@recipe_text[i]['food'].capitalize} ") %>
-                                <% elsif i == @recipe_text.count - 1 %>
-                                    <% @ingredients.concat("and #{@recipe_text[i]['food'].downcase}.") %>
-                                <% else %>
-                                    <% @ingredients.concat("#{@recipe_text[i]['food'].downcase}, ") %>
-                                <% end %>
-                                <% i += 1 %>
-                            <% end %> </br>
-                        
-                        <h5 class="ingredients_h5"> Ingredients: <span> <%= @ingredients %> </span> </h5>
-                        
-                        <%= button_tag(id: "empty_heart", onclick: "favorite(this)", data: { recipe_name: recipe['recipe']['label'], recipe_url: recipe['recipe']['url'], recipe_ingredients: @ingredients, recipe_image: recipe['recipe']['image'] }) do %>
-                            <%= image_tag("heart.png") %>
-                        <% end %>
-                        <%= button_tag(id: "filled_heart", onclick: "unfavorite(this)") do %>
-                            <%= image_tag("filled_heart.png") %>
-                        <% end %>
+                    <% @recipe_text = recipe['recipe']['ingredients'] %>
+                            <% i = 0 %>
+                            <% @ingredients = '' %>
+                                <% while i < @recipe_text.count do %>
+                                    <% if i == 0 %>
+                                        <% @ingredients.concat("#{@recipe_text[i]['food'].capitalize} ") %>
+                                    <% elsif i == @recipe_text.count - 1 %>
+                                        <% @ingredients.concat("and #{@recipe_text[i]['food'].downcase}.") %>
+                                    <% else %>
+                                        <% @ingredients.concat("#{@recipe_text[i]['food'].downcase}, ") %>
+                                    <% end %>
+                                    <% i += 1 %>
+                                <% end %> </br>
+                            
+                            <h5 class="ingredients_h5"> Ingredients: <span> <%= @ingredients %> </span> </h5>
+                            
+                            <%= button_tag(id: "empty_heart", onclick: "favorite(this)", data: { recipe_name: recipe['recipe']['label'], recipe_url: recipe['recipe']['url'], recipe_ingredients: @ingredients, recipe_image: recipe['recipe']['image'] }) do %>
+                                <%= image_tag("heart.png") %>
+                            <% end %>
+                            <%= button_tag(id: "filled_heart", onclick: "unfavorite(this)") do %>
+                                <%= image_tag("filled_heart.png") %>
+                            <% end %>
 
-                 
-            </div>
-            
+                    
+                </div>
+                
+            <% end %> 
+
         <% end %> 
+    </div>
 
-    <% end %> 
+    <%= paginate @paginatable_array %>
+
+
 </div>
-
-<%= paginate @paginatable_array %>
-
