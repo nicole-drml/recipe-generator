@@ -1,7 +1,7 @@
 # What's your Ulam Pare?
 > This is a recipe generator project built on Rails that help users generate a recipe based on dietary preferences or ingredients they have on hand.
 
-![image](https://user-images.githubusercontent.com/68190784/222671099-e621623d-8964-4d1d-919a-0bacce570441.png)
+![image](https://user-images.githubusercontent.com/68190784/222714561-d49c55b7-00a1-4750-be8b-8b4bebbee810.png)
 
 ---
 ## Usage
@@ -17,7 +17,7 @@
 
 3. Click Home to generate a random recipe.
 
-![home_random](https://user-images.githubusercontent.com/68190784/222640973-38f6fc8b-aabe-4097-8868-89bddc7490d8.png)
+![image](https://user-images.githubusercontent.com/68190784/222715808-eb4841b9-da88-4471-b52d-9e33e081413e.png)
 
 
 4. To search for recipes with ingredient, click on the Recipe Search.
@@ -29,7 +29,6 @@ You can also filter the results on the optional filters provided.
 5. Upon searching, you can click the heart icon to save the recipe as your Favorites.
 
 ![favorite_heart](https://user-images.githubusercontent.com/68190784/222705542-e0d15ab2-7125-4f6e-ab05-706b75cf46df.png)
-
 
 6. You can view your saved recipes in the Favorites tab.
 
