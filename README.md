@@ -37,4 +37,6 @@ You can also filter the results on the optional filters provided.
 
 7. Clicking in the recipe will redirect you to the website on how to cook the recipe.
 
+---
+
 **Deployed with [Fly](https://broken-surf-9128.fly.dev)**
