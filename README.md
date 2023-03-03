@@ -17,14 +17,15 @@
 
 3. Click Home to generate a random recipe.
 
-![home_random](https://user-images.githubusercontent.com/68190784/222640973-38f6fc8b-aabe-4097-8868-89bddc7490d8.png)
+![image](https://user-images.githubusercontent.com/68190784/222715808-eb4841b9-da88-4471-b52d-9e33e081413e.png)
 
 
 4. To search for recipes with ingredient, click on the Recipe Search.
 Input the ingredients in the search bar. You can also search for recipes directly!
 You can also filter the results on the optional filters provided.
 
-![image](https://user-images.githubusercontent.com/68190784/222705765-30c7dc07-9bad-4d6b-819d-ba5ee322e090.png)
+![image](https://user-images.githubusercontent.com/68190784/222715727-c666c110-3391-4f16-826c-45e0f7aa798c.png)
+
 
 5. Upon searching, you can click the heart icon to save the recipe as your Favorites.
 
