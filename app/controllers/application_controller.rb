@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   protected
 
   def after_sign_in_path_for(_resource)
-    dashboard_path
+    random_recipe_path
   end
 
   # def after_register_path_for(resource)

@@ -1,3 +1,9 @@
+.random_recipe_title {
+  text-align: center;
+  padding: 10px;
+  font-size: 1.5em;
+}
+
 .random_recipe_response {
   display: flex;
   flex-direction: column;
@@ -5,7 +11,9 @@
   gap: 5px;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 15px;
   width: 50%;
+
   .random_recipe_block {
     background-color: rgb(230, 230, 211);
     padding: 1.5em;
@@ -13,8 +21,11 @@
     .random_recipe_link {
       padding: 10px 4px;
       &:hover {
-          // background-color: rgba(230, 230, 211, 0.9);
           background-color: rgba(163, 163, 145, 0.05);
+      }
+
+      h4 {
+        margin-bottom: 20px;
       }
   }
   }
