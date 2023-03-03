@@ -21,4 +21,4 @@
 Input the ingredients in the search bar. You can also search for recipes directly!
 You can also filter the results on the optional filters provided.
 
-![image](https://user-images.githubusercontent.com/68190784/222640437-f4d31ba3-ec21-42dd-a965-1098d82c8d51.png)
+![image](https://user-images.githubusercontent.com/68190784/222640572-0cdf2a17-9a53-4ea3-bae3-c62406d41324.png)
