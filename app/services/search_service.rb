@@ -9,10 +9,7 @@ class SearchService
     request_url.concat("&health=#{health}") unless health.empty?
     request_url.concat("&cuisineType=#{cuisine}") unless cuisine.empty?
     request_url.concat("&excluded=#{exclude}") unless exclude.empty?
-    unless dish.empty?
-      dishstr = dish.gsub(/\s/, '%20')
-      request_url.concat("&dishType=#{dishstr}")
-    end
+
     response = HTTParty.get(request_url)
     @recipes = response['hits']
   end

@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2023-03-13T15:46:31+08:00">2023-03-13T15:46:31+08:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2023-03-14T17:25:18+08:00">2023-03-14T17:25:18+08:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -23,14 +23,14 @@
     <span class="group_name">All Files</span>
     (<span class="covered_percent">
       <span class="green">
-  95.27%
+  99.32%
 </span>
 
      </span>
      covered at
      <span class="covered_strength">
        <span class="red">
-         0.97
+         0.99
        </span>
     </span> hits/line
     )
@@ -39,15 +39,15 @@
   <a name="AllFiles"></a>
 
   <div>
-    <b>31</b> files in total.
+    <b>30</b> files in total.
   </div>
 
   <div class="t-line-summary">
-    <b>148</b> relevant lines,
-    <span class="green"><b>141</b> lines covered</span> and
-    <span class="red"><b>7</b> lines missed. </span>
+    <b>146</b> relevant lines,
+    <span class="green"><b>145</b> lines covered</span> and
+    <span class="red"><b>1</b> lines missed. </span>
     (<span class="green">
-  95.27%
+  99.32%
 </span>
 )
   </div>
@@ -148,13 +148,13 @@
           </tr>
         
           <tr class="t-file">
-            <td class="strong t-file__name"><a href="#2df994bd125eff45120bd04dd315530fcd42bb76" class="src_link" title="app/services/recipe_service.rb">app/services/recipe_service.rb</a></td>
-            <td class="red strong cell--number t-file__coverage">66.67 %</td>
-            <td class="cell--number">17</td>
-            <td class="cell--number">9</td>
-            <td class="cell--number">6</td>
-            <td class="cell--number">3</td>
-            <td class="cell--number">0.67</td>
+            <td class="strong t-file__name"><a href="#4442e73d73faddb48a6a972465f1d690536179d2" class="src_link" title="app/services/search_service.rb">app/services/search_service.rb</a></td>
+            <td class="green strong cell--number t-file__coverage">100.00 %</td>
+            <td class="cell--number">16</td>
+            <td class="cell--number">11</td>
+            <td class="cell--number">11</td>
+            <td class="cell--number">0</td>
+            <td class="cell--number">1.00</td>
             
           </tr>
         
@@ -281,12 +281,12 @@
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#58af8599c460fbed42dcebacd8ce177c7dc65d14" class="src_link" title="spec/edamam_api_spec.rb">spec/edamam_api_spec.rb</a></td>
-            <td class="yellow strong cell--number t-file__coverage">84.62 %</td>
-            <td class="cell--number">27</td>
-            <td class="cell--number">13</td>
-            <td class="cell--number">11</td>
-            <td class="cell--number">2</td>
-            <td class="cell--number">1.08</td>
+            <td class="green strong cell--number t-file__coverage">100.00 %</td>
+            <td class="cell--number">33</td>
+            <td class="cell--number">15</td>
+            <td class="cell--number">15</td>
+            <td class="cell--number">0</td>
+            <td class="cell--number">1.00</td>
             
           </tr>
         
@@ -397,17 +397,6 @@
             <td class="cell--number">4</td>
             <td class="cell--number">0</td>
             <td class="cell--number">1.00</td>
-            
-          </tr>
-        
-          <tr class="t-file">
-            <td class="strong t-file__name"><a href="#f2fe253ee47135712bc0603dfc1f3b59a9f71c06" class="src_link" title="spec/requests/recipes_spec.rb">spec/requests/recipes_spec.rb</a></td>
-            <td class="yellow strong cell--number t-file__coverage">83.33 %</td>
-            <td class="cell--number">10</td>
-            <td class="cell--number">6</td>
-            <td class="cell--number">5</td>
-            <td class="cell--number">1</td>
-            <td class="cell--number">0.83</td>
             
           </tr>
         
@@ -876,12 +865,12 @@
 </div>
 
       
-        <div class="source_table" id="2df994bd125eff45120bd04dd315530fcd42bb76">
+        <div class="source_table" id="4442e73d73faddb48a6a972465f1d690536179d2">
   <div class="header">
-    <h3>app/services/recipe_service.rb</h3>
+    <h3>app/services/search_service.rb</h3>
     <h4>
-      <span class="red">
-  66.67%
+      <span class="green">
+  100.0%
 </span>
 
       lines covered
@@ -890,9 +879,9 @@
     
 
     <div class="t-line-summary">
-      <b>9</b> relevant lines.
-      <span class="green"><b>6</b> lines covered</span> and
-      <span class="red"><b>3</b> lines missed.</span>
+      <b>11</b> relevant lines.
+      <span class="green"><b>11</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
     </div>
 
     
@@ -909,7 +898,7 @@
 
             
 
-            <code class="ruby">class RecipeService</code>
+            <code class="ruby">class SearchService</code>
           </li>
         </div>
       
@@ -953,18 +942,18 @@
 
             
 
-            <code class="ruby">  def self.get_chicken_recipe</code>
+            <code class="ruby">  def self.search(query, diet, health, cuisine, dish, exclude)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="6">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="6">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">    # sample query of chicken recipes</code>
+            
+
+            <code class="ruby">    request_url = &quot;https://api.edamam.com/api/recipes/v2?type=public&amp;q=#{query}&amp;app_id=#{@app_id}&amp;app_key=#{@app_key}&quot;</code>
           </li>
         </div>
       
@@ -986,18 +975,18 @@
 
             
 
-            <code class="ruby">    query = &#39;chicken&#39;</code>
+            <code class="ruby">    request_url.concat(&quot;&amp;diet=#{diet}&quot;) unless diet.empty?</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="9">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="9">
+            <span class="hits">1</span>
             
 
-            <code class="ruby"></code>
+            
+
+            <code class="ruby">    request_url.concat(&quot;&amp;health=#{health}&quot;) unless health.empty?</code>
           </li>
         </div>
       
@@ -1008,18 +997,18 @@
 
             
 
-            <code class="ruby">    response = HTTParty.get(&quot;https://api.edamam.com/api/recipes/v2?type=public&amp;q=#{query}&amp;app_id=#{@app_id}&amp;app_key=#{@app_key}&quot;)</code>
+            <code class="ruby">    request_url.concat(&quot;&amp;cuisineType=#{cuisine}&quot;) unless cuisine.empty?</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="11">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="11">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">    recipes = response[&#39;hits&#39;]</code>
+            
+
+            <code class="ruby">    request_url.concat(&quot;&amp;excluded=#{exclude}&quot;) unless exclude.empty?</code>
           </li>
         </div>
       
@@ -1035,24 +1024,24 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="13">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="13">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">    recipes.map do |recipe|</code>
+            
+
+            <code class="ruby">    response = HTTParty.get(request_url)</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="14">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="14">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">      recipe[&#39;recipe&#39;][&#39;label&#39;]</code>
+            
+
+            <code class="ruby">    @recipes = response[&#39;hits&#39;]</code>
           </li>
         </div>
       
@@ -1063,23 +1052,12 @@
 
             
 
-            <code class="ruby">    end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="16">
-            
-            
-
-            
-
             <code class="ruby">  end</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="17">
+          <li class="never" data-hits="" data-linenumber="16">
             
             
 
@@ -6840,8 +6818,8 @@
   <div class="header">
     <h3>spec/edamam_api_spec.rb</h3>
     <h4>
-      <span class="yellow">
-  84.62%
+      <span class="green">
+  100.0%
 </span>
 
       lines covered
@@ -6850,9 +6828,9 @@
     
 
     <div class="t-line-summary">
-      <b>13</b> relevant lines.
-      <span class="green"><b>11</b> lines covered</span> and
-      <span class="red"><b>2</b> lines missed.</span>
+      <b>15</b> relevant lines.
+      <span class="green"><b>15</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
     </div>
 
     
@@ -6896,13 +6874,13 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="4">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="4">
+            
             
 
             
 
-            <code class="ruby">  it &#39;should return recipes for a chicken query&#39; do</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -6913,40 +6891,40 @@
 
             
 
-            <code class="ruby">    chicken = RecipeService.get_chicken_recipe</code>
+            <code class="ruby">  describe &#39;#call&#39; do</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="6">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="6">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">    expect(chicken).to be_an_instance_of(Array)</code>
+            
+
+            <code class="ruby">    query = &#39;chicken&#39;</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="7">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="7">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">  end</code>
+            
+
+            <code class="ruby">    diet = &#39;&#39;</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="8">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="8">
+            <span class="hits">1</span>
             
 
-            <code class="ruby"></code>
+            
+
+            <code class="ruby">    health = &#39;&#39;</code>
           </li>
         </div>
       
@@ -6957,51 +6935,51 @@
 
             
 
-            <code class="ruby">  describe &#39;#call&#39; do</code>
+            <code class="ruby">    cuisine = &#39;&#39;</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="10">
-            <span class="hits">2</span>
+          <li class="covered" data-hits="1" data-linenumber="10">
+            <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">    let(:query) { &#39;chicken&#39; }</code>
+            <code class="ruby">    dish = &#39;&#39;</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="11">
-            <span class="hits">2</span>
+          <li class="covered" data-hits="1" data-linenumber="11">
+            <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">    let(:edamam_api_key) { ENV[&#39;EDAMAM_API_KEY&#39;] } # your Edamam API key</code>
+            <code class="ruby">    exclude = &#39;&#39;</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="12">
-            <span class="hits">2</span>
+          <li class="covered" data-hits="1" data-linenumber="12">
+            <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">    let(:edamam_api_id) { ENV[&#39;EDAMAM_API_ID&#39;] } # your Edamam API ID</code>
+            <code class="ruby">    edamam_api_key = ENV[&#39;EDAMAM_APP_KEY&#39;] # your Edamam API key</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="13">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="13">
+            <span class="hits">1</span>
             
 
-            <code class="ruby"></code>
+            
+
+            <code class="ruby">    edamam_api_id = ENV[&#39;EDAMAM_APP_ID&#39;] # your Edamam API ID</code>
           </li>
         </div>
       
@@ -7034,7 +7012,7 @@
 
             
 
-            <code class="ruby">      stub_request(:get, &quot;https://api.edamam.com/search?q=#{query}&amp;app_id=#{edamam_api_id}&amp;app_key=#{edamam_api_key}&quot;)</code>
+            <code class="ruby">        @request_spec = stub_request(:get, &quot;https://api.edamam.com/api/recipes/v2?type=public&amp;q=#{query}&amp;app_id=#{edamam_api_id}&amp;app_key=#{edamam_api_key}&quot;).</code>
           </li>
         </div>
       
@@ -7045,7 +7023,7 @@
 
             
 
-            <code class="ruby">        .to_return(status: 200, body: &#39;{&quot;hits&quot;: []}&#39;, headers: {})</code>
+            <code class="ruby">        with(</code>
           </li>
         </div>
       
@@ -7056,7 +7034,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">          headers: {</code>
           </li>
         </div>
       
@@ -7067,18 +7045,18 @@
 
             
 
-            <code class="ruby">      # call the Search service</code>
+            <code class="ruby">          &#39;Accept&#39;=&gt;&#39;*/*&#39;,</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="20">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="20">
+            
             
 
             
 
-            <code class="ruby">      result = Search.new(query).call</code>
+            <code class="ruby">          &#39;Accept-Encoding&#39;=&gt;&#39;gzip;q=1.0,deflate;q=0.6,identity;q=0.3&#39;,</code>
           </li>
         </div>
       
@@ -7089,7 +7067,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">          &#39;User-Agent&#39;=&gt;&#39;Ruby&#39;</code>
           </li>
         </div>
       
@@ -7100,18 +7078,18 @@
 
             
 
-            <code class="ruby">      # assert that the Edamam API was called with the correct parameters</code>
+            <code class="ruby">          }).</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="23">
+          <li class="never" data-hits="" data-linenumber="23">
             
             
 
             
 
-            <code class="ruby">      expect(a_request(:get, &quot;https://api.edamam.com/search?q=#{query}&amp;app_id=#{edamam_api_id}&amp;app_key=#{edamam_api_key}&quot;)).to have_been_made.once</code>
+            <code class="ruby">        to_return(status: 200, body: &quot;&quot;, headers: {})</code>
           </li>
         </div>
       
@@ -7122,7 +7100,7 @@
 
             
 
-            <code class="ruby">    end</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -7133,12 +7111,23 @@
 
             
 
-            <code class="ruby">  end</code>
+            <code class="ruby">      # call the Search service</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="26">
+          <li class="covered" data-hits="1" data-linenumber="26">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      result = SearchService.search(query, diet, health, cuisine, dish, exclude)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="27">
             
             
 
@@ -7149,7 +7138,62 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="27">
+          <li class="never" data-hits="" data-linenumber="28">
+            
+            
+
+            
+
+            <code class="ruby">      # assert that the Edamam API was called with the correct parameters</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="29">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      expect(@request_spec).to have_been_made.once</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="30">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="31">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="32">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="33">
             
             
 
@@ -9418,147 +9462,6 @@
       
         <div>
           <li class="never" data-hits="" data-linenumber="7">
-            
-            
-
-            
-
-            <code class="ruby">end</code>
-          </li>
-        </div>
-      
-    </ol>
-  </pre>
-</div>
-
-      
-        <div class="source_table" id="f2fe253ee47135712bc0603dfc1f3b59a9f71c06">
-  <div class="header">
-    <h3>spec/requests/recipes_spec.rb</h3>
-    <h4>
-      <span class="yellow">
-  83.33%
-</span>
-
-      lines covered
-    </h4>
-
-    
-
-    <div class="t-line-summary">
-      <b>6</b> relevant lines.
-      <span class="green"><b>5</b> lines covered</span> and
-      <span class="red"><b>1</b> lines missed.</span>
-    </div>
-
-    
-
-  </div>
-
-  <pre>
-    <ol>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="1">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">require &#39;rails_helper&#39;</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="2">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="3">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">RSpec.describe &#39;Recipes&#39;, type: :request do</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="4">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  describe &#39;GET /recipes&#39; do</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="5">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    it &#39;should return all recipes&#39; do</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="6">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">      get recipes_path</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="missed" data-hits="0" data-linenumber="7">
-            
-            
-
-            
-
-            <code class="ruby">      expect(response).to have_http_status(200)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="8">
-            
-            
-
-            
-
-            <code class="ruby">    end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="9">
-            
-            
-
-            
-
-            <code class="ruby">  end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="10">
             
             
 
